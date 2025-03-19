@@ -66,7 +66,7 @@ app.post('/addSchool', (req, res) => {
 
         res.status(201).json({
             message: 'School added successfully',
-            schoolId: result
+            schoolId: result.lastInsertRowid
         });
     } catch (error) {
         res.status(400).json({
